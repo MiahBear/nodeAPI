@@ -17,7 +17,7 @@ conn.connect((err) => {
     console.log('MySQL Connected...');
 });
 
-app.get('/api/httpRes/:id', (req, res) => {
+app.get('/api/httpRes', (req, res) => {
     let sql = "SELECT * FROM products";
     let query = conn.query(sql, (err, result) => {
         if(err) throw err;
